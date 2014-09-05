@@ -99,33 +99,22 @@
      * @method executeFunctionByName
      * @private
      * @param functionName {string} the name of the function to be called
-     * @param context {object} context of the function to be called
+     * @param scope {object} scope of the function to be called
      * @param args {array} arguments to be passed to the function to be called
      * @return {function} invocation of function to be called
      */
-    HARVESTJS.Harvest.prototype.executeFunctionByName = function(functionName, context, args) {
+    HARVESTJS.Harvest.prototype.executeFunctionByName = function(functionName, scope, args) {
 
-        context = context === undefined ? window : context;
+        scope = scope === undefined ? window : scope;
 
         var argsLocal = Array.prototype.slice.call(arguments, 2);
         var namespaces = functionName.split(".");
         var func = namespaces.pop();
         for (var i = 0; i < namespaces.length; i++) {
-            context = context[namespaces[i]];
+            scope = scope[namespaces[i]];
         }
-        return context[func].apply(context, argsLocal);
+        return scope[func].apply(scope, argsLocal);
     };
-
-    /**
-     * Harvest specific error object
-     */
-    HARVESTJS.Harvest.prototype.HarvestError = function(message) {
-        this.name = "HarvestError";
-        this.message = message || "Default Harvest Message";
-    };
-
-    HARVESTJS.Harvest.HarvestError.prototype = new Error();
-    HARVESTJS.Harvest.HarvestError.prototype.constructor = HARVESTJS.Harvest.HarvestError;
 
 
     return HARVESTJS.Harvest;
