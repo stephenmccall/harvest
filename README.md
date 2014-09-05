@@ -8,7 +8,7 @@ Harvest is a super simplified Node-based web scraping service enabling client si
 
 Requirements
 ------------
-You will need to have Grunt [http://gruntjs.com/] & PhantomJS installed [http://phantomjs.org/download.html].
+You will need to have Node [http://nodejs.org/] & Grunt [http://gruntjs.com/] & PhantomJS installed [http://phantomjs.org/download.html].
 
 Harvest makes use of the node-phantom [https://github.com/alexscheelmeyer/node-phantom] bridge which also has a dependency on [socket.io](http://socket.io/).
 
