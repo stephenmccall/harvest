@@ -45,7 +45,7 @@ Harvest consists of 4 primary JS files.
 
   - harvest.js: a Node web server leveraging the node-phantom bridge
   - harvest-assist.js: contains a utility function used to execute jQuery DOM selection on the pages loaded in to the PhantomJS browser by harvest.js
-  - harvest-client.js: a utility libary to simplify working with the responses provided by harvest.js
+  - harvest-client.js: a utility libary to simplify working with the responses provided by the harvest.js server
   - jquery.min.js: a version of the jQuery 1.x library
 
 By default harvest.js will try to load the "jquery.min.js" library and "harvest-assist.js" files from the same directory in which it is run.  The path to and names of these files can be changed by editing the "jQuery" and "harvestAssist" properties in the harvest.js file.
