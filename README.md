@@ -50,7 +50,7 @@ Harvest consists of 4 primary JS files.
 
 By default harvest.js will try to load the "jquery.min.js" library and "harvest-assist.js" files from the same directory in which it is run.  The path to and names of these files can be changed by editing the "jQuery" and "harvestAssist" properties in the harvest.js file.
 
-The default address of this server will be:  http://localhost:8123.  This can be changed by editing the "server" and "port" variables in the harvest.js file.  The address of this server should be publicly accessible.
+The default address of the harvest.js server will be:  http://localhost:8123.  This can be changed by editing the "server" and "port" variables in the harvest.js file.  The address of this server should be publicly accessible.
 
 To start the Harvest server, from the /src directory run:
 
@@ -60,7 +60,7 @@ With the server running you can now submit requests.
 
 Harvest expects two parameters to be passed with each request:
 
-  - A "data" parameter in JSON format and a "callBack" parameter as a string.
+  - A "data" parameter in JSON format
   - A "callBack" parameter as a string
 
 The JSON object passed in the "data" parameter should contain the following properties:
@@ -87,39 +87,39 @@ Example response format:
 
 It is important to note that the selections in the response from the harvest.js server will be URL encoded and the string will need to be unescaped in order to be useful.  The harvest-client.js file contains utility functions to simplify this.
 
-```Example usage with the harvest-client.js utility file
+Example usage with the harvest-client.js utility file:
 
-var harvest = new HARVESTJS.Harvest('#container', {
-    server: "http://localhost:8123/",
-    url: "https://www.example.com/",
-    selector: "h1",
-    delay: 0,
-    callBack: {
-        callBackName: "harvest.callback"
-         //Example of how to chain synchronous calls to the Harvest service
-        next: {
-            functionName: "nextFunction",
-            scope: myObj,
-            arguments: ["argument1", "argument2", ["argument3"]]
-        }
-    }
-});
-
-var myObj = {};
-
-myObj.nextFunction = function (arg1, arg2, arg3) {
-
-    this.harvest2 = new HARVESTJS.Harvest('#container', {
+    var harvest = new HARVESTJS.Harvest('#container', {
         server: "http://localhost:8123/",
         url: "https://www.example.com/",
-        selector: "p",
+        selector: "h1",
         delay: 0,
         callBack: {
-            callBackName: "myObj.harvest2.callback"
+            callBackName: "harvest.callback"
+             //Example of how to chain synchronous calls to the Harvest service
+            next: {
+                functionName: "nextFunction",
+                scope: myObj,
+                arguments: ["argument1", "argument2", ["argument3"]]
+            }
         }
     });
 
-}
+    var myObj = {};
+
+    myObj.nextFunction = function (arg1, arg2, arg3) {
+
+        this.harvest2 = new HARVESTJS.Harvest('#container', {
+            server: "http://localhost:8123/",
+            url: "https://www.example.com/",
+            selector: "p",
+            delay: 0,
+            callBack: {
+                callBackName: "myObj.harvest2.callback"
+            }
+        });
+
+    }
 
 Please see the /docs directory for more information on how to leverage the methods available in harvest-client.js to make working with responses from the harvest.js server easier.
 
