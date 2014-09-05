@@ -1,0 +1,9 @@
+{
+    "name": "Harvest",
+    "description": "Harvest: Super simple cross domain DOM querying",
+    "version": "0.0.1",
+    "url": "https://github.com/stephenmccall/harvest",
+    "options": {
+        "outdir": "docs"
+    }
+}
