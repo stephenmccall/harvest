@@ -129,6 +129,8 @@ An example version of the Harvest service is available at:
 
 http://www.stephenmccall.com/harvest
 
-An example HTML document containing an end-to-end example implmentation utilizing harvest-client.js along with the example service above is included in the harvest-example.html document of this repo as well.
+An example HTML document utilizing harvest-client.js along with the example service above is included in the harvest-example.html document in this repo and at the following URL as well:
+
+[http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-example.html]
 
 A socket based version of the harvest.js script leveraging the 1.0 release of the socket.io library (http://socket.io/) on both client and server will be available soon.
