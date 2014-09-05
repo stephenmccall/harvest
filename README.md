@@ -3,7 +3,8 @@ Harvest
 
 Super simple cross domain DOM querying
 
-Harvest is a super simplified Node-based web scraping script enabling client side JavaScript to retrieve elements witin the DOM of documents hosted at any other publicly accessible domain utilizing the JSONP communication technique.
+Harvest is a super simplified Node-based web scraping service enabling client side JavaScript to retrieve elements within the DOM of documents hosted at any other publicly accessible address.
+
 
 Requirements
 ------------
@@ -49,7 +50,7 @@ Harvest consists of 4 primary JS files.
 
 By default harvest.js will try to load the "jquery.min.js" library and "harvest-assist.js" files from the same directory in which it is run.  The path to and names of these files can be changed by editing the "jQuery" and "harvestAssist" properties in the harvest.js file.
 
-The default adress of this server will be:  http://localhost:8123.  This can be changed by editing the "server" and "port" variables in the harvest.js file.  The address of this server should be publicly accessible.
+The default address of this server will be:  http://localhost:8123.  This can be changed by editing the "server" and "port" variables in the harvest.js file.  The address of this server should be publicly accessible.
 
 To start the Harvest server, from the /src directory run:
 
@@ -68,7 +69,7 @@ The JSON object passed in the "data" parameter should contain the following prop
   - selector (string) = jQuery style CSS selector statement to be used to match element(s) on the page at the requested URL
   - delay (int) = number of milliseconds to wait before querying the DOM after the page at the requested URL has completed loading in the PhantomJS browser
 
-The "callBack" parameter is the name of the function to which the return value of the harvest server will be passed.
+Harvest makes use of the JSONP communication technique.  The "callBack" parameter is the name of the function to which the object in the return value of the harvest server will be passed.
 
 Both the "data" and "callBack" parameters should be URL encoded prior to the request being sent.  The harvest-client.js file contains utility functions to simplify this.
 
