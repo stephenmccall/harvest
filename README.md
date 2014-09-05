@@ -33,7 +33,7 @@ To accomplish this do the following:
     remove ">=" from the following line:
     "dependencies": {
     "socket.io": ">=0.9.6"
-  }
+    }
     save edits
     npm install
 
