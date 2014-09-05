@@ -4,7 +4,7 @@
 
     /**
      * Harvest constructor
-     * Initializes the properties of the Harvest object
+     *
      * @class Harvest
      * @constructor
      * @param {string} $el The element to which the elements returned from the Harvest server will be appended
@@ -54,8 +54,8 @@
     };
 
     /**
-     * Defines the callback method the Harvest server will return the data to
-     * Appends all data returned to the specified element
+     * Defines the callback method the Harvest server will return the data to and Appends all data returned to the specified element
+     *
      * @method callback
      * @private
      * @param {Object} data The data returned from the Harvest server
