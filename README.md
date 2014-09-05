@@ -24,7 +24,7 @@ Then run:
     npm install
     grunt
 
-Due to a backwards compatibiity issue with the recent 1.0 release of socket.io you will need to manually revert the version of this library declared in the node-phantom package.json file.
+Due to a backwards compatibiity issue with the recent 1.0 release of [socket.io] you will need to manually revert the version of this library declared in the node-phantom package.json file.
 
 To accomplish this do the following:
 
@@ -125,12 +125,12 @@ Please see the /docs directory for more information on how to leverage the metho
 
 Other
 ------------
-An example version of the Harvest service is available at:
+An example version of the Harvest service with which to experiment is available at:
 
-http://www.stephenmccall.com/harvest
+[http://www.stephenmccall.com/harvest]
 
-An example HTML document utilizing harvest-client.js along with the example service above is included in the harvest-example.html document in this repo and at the following URL as well:
+An example HTML document utilizing harvest-client.js along with the example service above is included in the "harvest-example.html" document in this repo and at the following URL:
 
 [http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-example.html]
 
-A socket based version of the harvest.js script leveraging the 1.0 release of the socket.io library (http://socket.io/) on both client and server will be available soon.
+A socket based version of the harvest.js script leveraging the 1.0 release of the [socket.io] library (http://socket.io/) on both client and server will be available soon.
