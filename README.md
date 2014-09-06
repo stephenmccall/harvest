@@ -1,3 +1,4 @@
+![alt tag](https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg =200x)
 Harvest
 =======
 
