@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg =200x)
+<img src="https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg" alt="Harvest Logo" style="width: 200px;"/>
 Harvest
 =======
 
