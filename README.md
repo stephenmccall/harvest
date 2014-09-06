@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg" alt="Harvest Logo" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg" alt="Harvest Logo" width="200"/>
 Harvest
 =======
 
