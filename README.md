@@ -133,4 +133,8 @@ An example HTML document utilizing harvest-client.js along with the example serv
 
 [http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-example.html]
 
+There is also an example available to fork on JSFiddle:
+
+[http://jsfiddle.net/k7oz3wLL/6/]
+
 A socket based version of the harvest.js script leveraging the 1.0 release of the [socket.io] library (http://socket.io/) on both client and server will be available soon.
