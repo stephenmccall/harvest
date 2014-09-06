@@ -89,13 +89,17 @@ It is important to note that the selections in the response from the harvest.js 
 
 Example usage with the harvest-client.js utility file:
 
+    var server = "http://localhost:8123/";
+
+    var myObj = {};
+
     var harvest = new HARVESTJS.Harvest('#container', {
-        server: "http://localhost:8123/",
-        url: "https://www.example.com/",
-        selector: "h1",
-        delay: 0,
+        server: server,  //Address of Harvest server to be used
+        url: "https://www.example.com/",  //URL containing desired elements
+        selector: "h1",  //DOM selector to be executed
+        delay: 0,  //time(milliseconds) to delay execution of DOM selection
         callBack: {
-            callBackName: "harvest.callback"
+            callBackName: "harvest.callback"  //name of callback to receive data in response
              //Example of how to chain synchronous calls to the Harvest service
             next: {
                 functionName: "nextFunction",
@@ -104,8 +108,6 @@ Example usage with the harvest-client.js utility file:
             }
         }
     });
-
-    var myObj = {};
 
     myObj.nextFunction = function (arg1, arg2, arg3) {
 
