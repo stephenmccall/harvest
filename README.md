@@ -2,14 +2,16 @@
 Harvest
 =======
 <img src="https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg" alt="Harvest Logo" width="200"/>
-Super simple cross domain DOM querying
+Super Simple Cross Domain DOM Querying
 
 Harvest is a super simplified Node-based web scraping service enabling client side JavaScript to retrieve elements within the DOM of documents hosted at any other publicly accessible address.
 
 
 Requirements
 ------------
-You will need to have Node [http://nodejs.org/] & Grunt [http://gruntjs.com/] & PhantomJS installed [http://phantomjs.org/download.html].
+You will need to have Node [http://nodejs.org/] & Grunt [http://gruntjs.com/] & PhantomJS installed [http://phantomjs.org/download.html] to run the build process and examples locally.
+
+It is also recommeded that redis[redis.io] and forever[https://github.com/nodejitsu/forever] be installed on your server so that you are able to properly store results and run the Harvest server without interruption.
 
 Harvest makes use of the node-phantom [https://github.com/alexscheelmeyer/node-phantom] bridge which also has a dependency on [socket.io](http://socket.io/).
 
@@ -128,11 +130,11 @@ Please see the /docs directory for more information on how to leverage the metho
 
 Other
 ------------
-An example version of the Harvest service with which to experiment is available at:
+An example version of the Harvest service leveraging redis[redis.io] to cache results is available at:
 
 [http://www.stephenmccall.com/harvest]
 
-An example HTML document utilizing harvest-client.js along with the example service above is included in the "harvest-example.html" document in this repo and at the following URL:
+An example HTML document utilizing harvest-client.js along with the example service above is included in the "harvest-example.html" document in the /examples directory of this repo as well as at the following URL:
 
 [http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-example.html]
 
@@ -140,4 +142,4 @@ There is also an example available to fork on JSFiddle:
 
 [http://jsfiddle.net/k7oz3wLL/6/]
 
-A socket based version of the harvest.js script leveraging the 1.0 release of the [socket.io] library (http://socket.io/) on both client and server will be available soon.
+A socket based version of the harvest.js script leveraging the 1.0 release of the [socket.io] library on both client and server will be available soon.
