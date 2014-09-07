@@ -2,7 +2,7 @@
 Harvest
 =======
 <img src="https://raw.githubusercontent.com/stephenmccall/harvest/master/harvest-logo.jpg" alt="Harvest Logo" width="200"/>
-Super Simple Cross Domain DOM Querying
+[Super Simple Cross Domain DOM Querying](http://www.stephenmccall.com/harvest-a-super-simple-cross-domain-dom-querying-service/)
 
 Harvest is a super simplified Node-based web scraping service enabling client side JavaScript to retrieve elements within the DOM of documents hosted at any other publicly accessible address.
 
