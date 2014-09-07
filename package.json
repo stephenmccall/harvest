@@ -1,6 +1,6 @@
 {
   "author": "Stephen McCall (http://www.stephenmccall.com)",
-  "name": "harvest",
+  "name": "Harvest",
   "description": "Super simple cross domain DOM querying",
   "version": "0.0.1",
   "homepage": "https://github.com/stephenmccall/harvest",
@@ -8,15 +8,17 @@
     "type": "git",
     "url": "git://github.com/stephenmccall/harvest.git"
   },
-  "main": "harvest.js",
-  "dependencies": {"node-phantom": ">=0.2.1"},
+  "dependencies": {
+    "node-phantom": ">=0.2.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-yuidoc": "*",
-    "grunt-jsbeautifier":"~0.1.4",
-    "grunt-contrib-watch": "~0.5.3"
-    },
+    "grunt-jsbeautifier": "~0.1.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "redis": "^0.12.1"
+  },
   "license": "MIT",
   "engines": {
     "node": "*"

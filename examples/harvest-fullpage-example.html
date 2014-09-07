@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http - equiv="X-UA-Compatible" content="IE=edge">
+    <title>Full Page Harvest Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="https://news.fidelity.com/"></base>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-client.js">
+    </script>
+</head>
+
+<body>
+    <script>
+    var server = "http://www.stephenmccall.com/harvest";
+    var pageComponents = {};
+    pageComponents.getHead = new HARVESTJS.Harvest('head',
+    {
+        server: server,
+        url: "https://news.fidelity.com/news/topnews.jhtml",
+        selector: "head",
+        delay: 0,
+        callBack:
+        {
+            callBackName: "pageComponents.getHead.callback",
+            //Example of how to chain synchronous calls to the Harvest service
+            next:
+            {
+                functionName: "getBody",
+                scope: pageComponents,
+                arguments: []
+            }
+        }
+    });
+    pageComponents.getBody = function()
+    {
+        this.body = new HARVESTJS.Harvest('body',
+        {
+            server: server,
+            url: "https://news.fidelity.com/news/topnews.jhtml",
+            selector: "body",
+            delay: 0,
+            callBack:
+            {
+                callBackName: "pageComponents.body.callback"
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>

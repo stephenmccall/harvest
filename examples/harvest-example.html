@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http - equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Harvest Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>Loading CNN Headline:</p>
+    <h1 id="container">
+
+
+        </h1>
+    <div id="container2">
+        <p>Loading Highcharts Demo:</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js">
+    </script>
+    <script src="http://www.stephenmccall.com/wp-content/uploads/2014/09/harvest-client.js"></script>
+    <script>
+    var server = "http://www.stephenmccall.com/harvest";
+    var myObj = {};
+    var harvest = new HARVESTJS.Harvest('#container',
+    {
+        server: server,
+        url: "http://www.cnn.com/",
+        selector: "h1",
+        delay: 0,
+        callBack:
+        {
+            callBackName: "harvest.callback",
+            //Example of how to chain synchronous calls to the Harvest service
+            next:
+            {
+                functionName: "nextFunction",
+                scope: myObj,
+                arguments: ["argument1", "argument2", ["argument3"]]
+            }
+        }
+    });
+    myObj.nextFunction = function(arg1, arg2, arg3)
+    {
+        this.harvest2 = new HARVESTJS.Harvest('#container2',
+        {
+            server: server,
+            url: "http://www.highcharts.com/demo",
+            selector: "#container",
+            delay: 0,
+            callBack:
+            {
+                callBackName: "myObj.harvest2.callback"
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
