@@ -11,7 +11,7 @@ Requirements
 ------------
 You will need to have Node [http://nodejs.org/] & Grunt [http://gruntjs.com/] & PhantomJS installed [http://phantomjs.org/download.html] to run the build process and examples locally.
 
-It is also recommeded that redis[redis.io] and forever[https://github.com/nodejitsu/forever] be installed on your server so that you are able to properly store results and run the Harvest server without interruption.
+It is also recommeded that [redis.io](http://redis.io/) and [forever](https://github.com/nodejitsu/forever) be installed on your server so that you are able to properly store results and run the Harvest server without interruption.
 
 Harvest makes use of the node-phantom [https://github.com/alexscheelmeyer/node-phantom] bridge which also has a dependency on [socket.io](http://socket.io/).
 
@@ -130,7 +130,7 @@ Please see the /docs directory for more information on how to leverage the metho
 
 Other
 ------------
-An example version of the Harvest service leveraging redis[redis.io] to cache results is available at:
+An example version of the Harvest service leveraging [redis.io](http://redis.io/) to cache results is available at:
 
 [http://www.stephenmccall.com/harvest]
 
