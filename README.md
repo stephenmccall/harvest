@@ -96,7 +96,9 @@ Example usage with the harvest-client.js utility file:
 
     var myObj = {};
 
-    var harvest = new HARVESTJS.Harvest('#container', {
+    var harvest = new HARVESTJS.Harvest(
+        '#container', // Element which to append the response to
+        {
         server: server,  //Address of Harvest server to be used
         url: "https://www.example.com/",  //URL containing desired elements
         selector: "h1",  //DOM selector to be executed
@@ -114,7 +116,8 @@ Example usage with the harvest-client.js utility file:
 
     myObj.nextFunction = function (arg1, arg2, arg3) {
 
-        this.harvest2 = new HARVESTJS.Harvest('#container', {
+        this.harvest2 = new HARVESTJS.Harvest(
+            '#container', {
             server: "http://localhost:8123/",
             url: "https://www.example.com/",
             selector: "p",
